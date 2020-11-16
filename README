@@ -1,0 +1,84 @@
+/**********************************************************
+* PROJ1: SeqMatch - Trie Nodes Trees
+* Comp 15 Spring 2019
+* README
+* Author: Reed Kass-Mullet
+**********************************************************/
+
+Compile/run: Compiles using "make", run using "./SeqMatch"
+(UnitTests)  Compiles using "make UnitTest", run using "./UnitTest"
+
+Program Purpose: This project entails using a trienode tree as a data 
+structure for a database of strings. This class will be able to run a number
+of basic functions such as count_nodes, query, prefix_query, insert, and 
+remove. Purpose is to learn how to handle and maipulate a trieNode Tree.
+
+Acknowledgments:
+I used information from hw4 to learn how to structure the BIG 3
+I was provided some assistance and compansionship during the coding process 
+from fellow comp15 students Daniel Alderman & Mateo Hadeshian
+I did not use any information from the internet in the completion of this 
+project.
+I used the Makefile from hw4 as a guideline for creating my Makefile.
+
+Files:
+
+trieNodeTree.h
+This is the header file for the trieNodeTree class which I wrote. It contains
+the function declarations for all functions used in the class.
+
+trieNodetree.cpp
+This is the .cpp file for the trieNodeTree class which contains all of the 
+real code used in the class.
+
+main.cpp
+This is the .cpp file for the main of the executable file. It simply checks
+to make sure the correct number of arguments were given and calls the correct
+parameterized constructor for trieNodeTree. 
+
+unittests.cpp
+This is my file for all of the unittests I wrote for the class. I have a unit
+test for each main function that we did, such as query, remove, insert, and
+prefix_query.
+
+Makefile
+This is the makefile for everything. It will make both the unittests and the
+main SeqMatch executable
+
+README
+t
+
+Data Structures: 
+The primary data structure I used for this project is a trie
+Node Tree. It is a tree of struct trieNode. Each node has an array of pointers
+for its children, a pointer to its parent, and a boolean value which represents
+if a trieNode is the end of a word. I chose this data structure because a tree
+structure is very good for the storing of strings as it allows for the reuse 
+of space as words overlap. The inclusion of a parent pointer as a part of the
+structure is not necessary for a trieNode tree, however, when I was designing
+how my code would work, I realized that it allowed for utility in terms of
+being able to print a word by simply having the final node of the word. The
+tree structure also allows for efficient searching.
+
+Testing:
+I started by project by coding my driver function. I tested the process of 
+taking in commands and calling functions by simply printing the names of the
+function calls when they were specified in the command file. By doing this I 
+knew that my constructor and driver were functioning before I had coded any
+of my real functions. Once this was complete, I started with my insert and
+count_nodes functions. I started my unit test file and unit_tested my insert
+by calling my count_nodes function to check if things added up correctly and
+if the code would correctly handle inserting in the middle of a longer already
+existing function. I wrote my removal and tested it with it's own unit test.
+I tested my query function with a unit test, but I also made sure to test it
+against ./the_SeqMatch so that I would know that my process of deducing the
+best match was the same as the expected output. My last function was prefix
+query as it mainly could be done with code that I had already written. I tested
+it with a unit test that read the ouput file rather than using a public
+function directly. This allowed me to test the ordering of my print function
+and my output file indirectly. My final testing was on the percentage which
+prints upon a query being found, I tested this my comparing my output with
+the ./the_SeqMatch.
+
+Notes:
+none
