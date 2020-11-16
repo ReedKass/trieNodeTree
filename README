@@ -46,7 +46,6 @@ This is the makefile for everything. It will make both the unittests and the
 main SeqMatch executable
 
 README
-t
 
 Data Structures: 
 The primary data structure I used for this project is a trie
